@@ -20,7 +20,17 @@
 
 //const divisibleBy = (numbers, divisor) => numbers.filter( num => num % divisor ===0)
 
+//---4-----------Ваша функция принимает два аргумента:
 
- 
+/*текущий возраст отца (лет)
+текущий возраст сына (лет)
+Подсчитайте, сколько лет назад отец был вдвое старше сына (или через сколько лет он будет вдвое старше).
+ */
+// function learnJavaScript() {
+//     const twiceAsOld = (dadYearsOld, sonYearsOld) => {
+//       return Math.abs(dadYearsOld * - sonYearsOld)
+//     }
+//     return twiceAsOld(36, 7)
+//   }
 
 
