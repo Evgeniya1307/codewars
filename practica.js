@@ -34,3 +34,60 @@
 //   }
 
 
+//-----------------5 ПРИМЕР----------------
+/*failuresListдолжен быть массивом, содержащим result failureсообщения.
+
+failuresListдолжен быть равен указанному выходу.
+
+Следует использовать строки шаблонов и интерполяцию выражений.
+
+Следует использовать итератор.*/
+// const result = {
+//     success: ["max-length", "no-amd", "prefer-arrow-functions"],
+//     failure: ["no-var", "var-on-top", "linebreak"],
+//     skipped: ["no-extra-semi", "no-dup-keys"]
+//   };
+//   function makeList(arr) {
+    
+//    const failureItems = arr.map(item => `<li class="text-warning">${item}</li>`);
+   
+  
+//     return failureItems;
+//   }
+  
+//   const failuresList = makeList(result.failure);
+
+
+
+//--------------------------------------6 ПРИМЕР
+/*Thermostatдолжен быть classс определенным constructorметодом.
+
+classследует использовать ключевое слово.
+
+Thermostatдолжна быть возможность создания экземпляра.
+
+При создании экземпляра со значением по Фаренгейту Thermostatследует установить правильный temperature.
+
+А getterследует определить.
+
+А setterследует определить.
+
+Вызов setterсо значением в градусах Цельсия должен установить temperature.*/
+
+// class Thermostat {
+//     constructor(thermos) {
+//       this._thermos = thermos
+//     }
+//     get temperature() {
+//       return (5 / 9) * (this._thermos - 32);
+//     }
+    
+//     set temperature(celsius) {
+//       this._thermos = (celsius * 9.0) / 5 + 32;
+//     }
+//   }
+    
+//   const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+//   let temp = thermos.temperature; // 24.44 in Celsius
+//   thermos.temperature = 26;
+//   temp = thermos.temperature; // 26 in Celsius
