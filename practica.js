@@ -1,16 +1,16 @@
 // ------------1.-------создать функцию принимающую строку и возвращающая гласные буквы
 
-// function disemvowel(str) {
-//     let newStr = (str.replace(/A|E|I|O|U|a|e|i|o|u/g, ''))
-//     return newStr;
-//    }
+function disemvowel(str) {
+    let newStr = (str.replace(/A|E|I|O|U|a|e|i|o|u/g, ''))
+    return newStr;
+   }
 
 //2.========= Проверьте, содержит ли строка одинаковое количество «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
 
-// function XO(str) {
+function XO(str) {
    
-//         return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
-//     }
+        return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+    }
 
 
 
@@ -18,7 +18,7 @@
 
 //Пример
 
-//const divisibleBy = (numbers, divisor) => numbers.filter( num => num % divisor ===0)
+const divisibleBy = (numbers, divisor) => numbers.filter( num => num % divisor ===0)
 
 //---4-----------Ваша функция принимает два аргумента:
 
@@ -26,12 +26,12 @@
 текущий возраст сына (лет)
 Подсчитайте, сколько лет назад отец был вдвое старше сына (или через сколько лет он будет вдвое старше).
  */
-// function learnJavaScript() {
-//     const twiceAsOld = (dadYearsOld, sonYearsOld) => {
-//       return Math.abs(dadYearsOld * - sonYearsOld)
-//     }
-//     return twiceAsOld(36, 7)
-//   }
+function learnJavaScript() {
+    const twiceAsOld = (dadYearsOld, sonYearsOld) => {
+      return Math.abs(dadYearsOld * - sonYearsOld)
+    }
+    return twiceAsOld(36, 7)
+  }
 
 
 //-----------------5 ПРИМЕР----------------
@@ -42,20 +42,20 @@ failuresListдолжен быть равен указанному выходу.
 Следует использовать строки шаблонов и интерполяцию выражений.
 
 Следует использовать итератор.*/
-// const result = {
-//     success: ["max-length", "no-amd", "prefer-arrow-functions"],
-//     failure: ["no-var", "var-on-top", "linebreak"],
-//     skipped: ["no-extra-semi", "no-dup-keys"]
-//   };
-//   function makeList(arr) {
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+  };
+  function makeList(arr) {
     
-//    const failureItems = arr.map(item => `<li class="text-warning">${item}</li>`);
+   const failureItems = arr.map(item => `<li class="text-warning">${item}</li>`);
    
   
-//     return failureItems;
-//   }
+    return failureItems;
+  }
   
-//   const failuresList = makeList(result.failure);
+  const failuresList = makeList(result.failure);
 
 
 
@@ -74,23 +74,22 @@ Thermostatдолжна быть возможность создания экзе
 
 Вызов setterсо значением в градусах Цельсия должен установить temperature.*/
 
-// class Thermostat {
-//     constructor(thermos) {
-//       this._thermos = thermos
-//     }
-//     get temperature() {
-//       return (5 / 9) * (this._thermos - 32);
-//     }
+class Thermostat {
+    constructor(thermos) {
+       this._thermos = thermos
+     }
+    get temperature() {
+       return (5 / 9) * (this._thermos - 32);
+     }
     
-//     set temperature(celsius) {
-//       this._thermos = (celsius * 9.0) / 5 + 32;
-//     }
-//   }
+     set temperature(celsius) {
+       this._thermos = (celsius * 9.0) / 5 + 32;     }
+  }
     
-//   const thermos = new Thermostat(76); // Setting in Fahrenheit scale
-//   let temp = thermos.temperature; // 24.44 in Celsius
-//   thermos.temperature = 26;
-//   temp = thermos.temperature; // 26 in Celsius
+   const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+   let temp = thermos.temperature; // 24.44 in Celsius
+   thermos.temperature = 26;
+   temp = thermos.temperature; // 26 in Celsius
 
 
 
@@ -110,3 +109,50 @@ const makeServerRequest = new Promise((resolve, reject) => {
 
 
   //----------------------------ПРИМЕР--------------------
+  /*Добавьте then метод к вашему обещанию. Используйте resultв 
+  качестве параметра его функцию обратного вызова и войдите resultв консоль.*/
+  const makeServerRequest1 = new Promise((resolve, reject) => {
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
+      
+    if(responseFromServer) {
+  
+      resolve("We got the data");
+    } else {  
+      reject("Data not received");
+    }
+  });
+  
+  makeServerRequest1.then(result => { // метод then с результатом
+    console.log(result)
+  })
+
+
+
+  //----------------------------ПРИМЕР --------
+  /*catchэто метод, используемый, когда ваше обещание было отклонено. 
+  Он выполняется сразу после вызова rejectметода обещания. Вот синтаксис:
+myPromise.catch(error => {
+});*/
+
+//Добавьте catchметод к вашему обещанию. Используйте errorв качестве параметра 
+//его функцию обратного вызова и войдите errorв консоль.
+
+const makeServerRequest2 = new Promise((resolve, reject) => {
+    // responseFromServer is set to false to represent an unsuccessful response from a server
+    let responseFromServer = false;
+      
+    if(responseFromServer) {
+      resolve("We got the data");
+    } else {  
+      reject("Data not received");
+    }
+  });
+  
+  makeServerRequest.then(result => {
+    console.log(result);
+  });
+  
+  makeServerRequest2.catch(error=>{ // метод catch
+    console.log(error)
+  })
