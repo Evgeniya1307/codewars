@@ -91,3 +91,22 @@ Thermostatдолжна быть возможность создания экзе
 //   let temp = thermos.temperature; // 24.44 in Celsius
 //   thermos.temperature = 26;
 //   temp = thermos.temperature; // 26 in Celsius
+
+
+
+//--------------------ПРИМЕР ----------------
+/*Сделайте так, чтобы обещание учитывало успех и неудачу. Если responseFromServerесть true, вызовите resolveметод для успешного выполнения обещания. Передайте resolveстроку со значением We got the data. Если responseFromServerесть false, используйте rejectвместо этого метод и передайте ему строку: Data not received.
+*/
+const makeServerRequest = new Promise((resolve, reject) => {
+    
+    let responseFromServer;
+      
+    if(responseFromServer) {
+      resolve ('We got the data')
+    } else {  
+     reject ('Data not received')
+    }
+  });
+
+
+  //----------------------------ПРИМЕР--------------------
