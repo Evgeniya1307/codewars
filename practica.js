@@ -156,3 +156,27 @@ const makeServerRequest2 = new Promise((resolve, reject) => {
   makeServerRequest2.catch(error=>{ // метод catch
     console.log(error)
   })
+
+
+  //------------------------------ПРИМЕР------------------
+  /*
+  Если вы хотите найти слово the строке The dog chased the cat, вы можете 
+  использовать следующее регулярное выражение: /the/. 
+  Обратите внимание, что в регулярном выражении не требуются кавычки.
+  В JavaScript есть несколько способов использования регулярных выражений. 
+  Один из способов проверить регулярное выражение — 
+  использовать .test()метод. Метод .test()принимает регулярное выражение, 
+  применяет его к строке (которая помещается в круглые скобки) и возвращает 
+  trueили false, если ваш шаблон что-то находит или нет.
+
+let testStr = "freeCodeCamp";
+let testRegex = /Code/;
+testRegex.test(testStr);
+Метод testздесь возвращает true.
+  */
+
+//Примените регулярное выражение myRegexк строке myString, используя .test()метод.
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result1 = myRegex.test(myString);
+
